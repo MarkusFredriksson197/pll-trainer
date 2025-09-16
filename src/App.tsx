@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="controls">
+      <div className="top-bar">
         <div className="category-selector">
           {categories.map(category => (
             <button
@@ -47,28 +47,28 @@ function App() {
             </button>
           ))}
         </div>
-
-        <div className="navigation">
-          <div className="nav-controls">
-            <button className="nav-btn" onClick={handlePrevious}>
-              ← Previous
-            </button>
-            <span className="counter">
-              {currentIndex + 1} / {filteredAlgorithms.length}
-            </span>
-            <button className="nav-btn" onClick={handleNext}>
-              Next →
-            </button>
-          </div>
-          <button className="random-btn" onClick={handleRandom}>
-            🎲 Random
-          </button>
-        </div>
       </div>
 
       <main className="main-content">
         <AlgorithmCard algorithm={currentAlgorithm} />
       </main>
+
+      <div className="bottom-bar">
+        <div className="nav-controls">
+          <button className="nav-btn" onClick={handlePrevious}>
+            ← Previous
+          </button>
+          <span className="counter">
+            {currentIndex + 1} / {filteredAlgorithms.length}
+          </span>
+          <button className="nav-btn" onClick={handleNext}>
+            Next →
+          </button>
+        </div>
+        <button className="random-btn" onClick={handleRandom}>
+          🎲 Random
+        </button>
+      </div>
     </div>
   );
 }

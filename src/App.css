@@ -19,8 +19,6 @@ html, body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: fixed;
-  width: 100%;
 }
 
 #root {
@@ -57,11 +55,33 @@ html, body {
   font-size: 1.1rem;
 }
 
-.controls {
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   padding: 12px 8px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .category-selector {
@@ -69,7 +89,6 @@ html, body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 12px;
 }
 
 .category-btn {
@@ -96,18 +115,11 @@ html, body {
   box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
 }
 
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 .nav-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -152,10 +164,9 @@ html, body {
 
 .main-content {
   flex: 1;
-  padding: 4px;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  padding: 80px 8px 120px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .app-footer {
