@@ -1,6 +1,5 @@
 import React from 'react';
 import { PLLAlgorithm } from '../data/pllAlgorithms';
-import CubeVisualization from './CubeVisualization';
 import './AlgorithmCard.css';
 
 interface AlgorithmCardProps {
@@ -44,8 +43,6 @@ const AlgorithmCard: React.FC<AlgorithmCardProps> = ({ algorithm }) => {
           </div>
         </div>
       </div>
-
-      <CubeVisualization pattern={algorithm.pattern} />
 
       <div className="algorithm-section">
         <h3>Algorithm</h3>

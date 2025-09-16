@@ -37,7 +37,6 @@ function App() {
     <div className="App">
       <header className="app-header">
         <h1>PLL Trainer</h1>
-        <p className="subtitle">CubeHead's PLL Algorithms</p>
       </header>
 
       <div className="controls">
@@ -54,15 +53,17 @@ function App() {
         </div>
 
         <div className="navigation">
-          <button className="nav-btn" onClick={handlePrevious}>
-            ← Previous
-          </button>
-          <span className="counter">
-            {currentIndex + 1} / {filteredAlgorithms.length}
-          </span>
-          <button className="nav-btn" onClick={handleNext}>
-            Next →
-          </button>
+          <div className="nav-controls">
+            <button className="nav-btn" onClick={handlePrevious}>
+              ← Previous
+            </button>
+            <span className="counter">
+              {currentIndex + 1} / {filteredAlgorithms.length}
+            </span>
+            <button className="nav-btn" onClick={handleNext}>
+              Next →
+            </button>
+          </div>
           <button className="random-btn" onClick={handleRandom}>
             🎲 Random
           </button>
