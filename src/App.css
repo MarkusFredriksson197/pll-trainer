@@ -163,14 +163,13 @@ html, body {
 
 .main-content {
   flex: 1;
-  padding: 100px 16px 100px;
+  padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: calc(100vh - 200px);
+  background: white;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .app-footer {
@@ -222,12 +221,11 @@ html, body {
   }
 
   .main-content {
-    padding: 120px 8px 120px;
-    min-height: calc(100vh - 240px);
+    margin-top: 90px;
+    margin-bottom: 120px;
   }
 
   .algorithm-card {
-    max-width: 100%;
     padding: 16px;
   }
 }
@@ -264,6 +262,7 @@ html, body {
   }
 
   .main-content {
-    padding: 110px 16px 110px;
+    margin-top: 85px;
+    margin-bottom: 110px;
   }
 }
