@@ -162,15 +162,15 @@ html, body {
 }
 
 .main-content {
-  flex: 1;
-  padding: 0;
+  position: fixed;
+  top: 80px;
+  bottom: 100px;
+  left: 0;
+  right: 0;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   background: white;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  height: calc(100vh - 180px);
   display: flex;
   justify-content: center;
 }
