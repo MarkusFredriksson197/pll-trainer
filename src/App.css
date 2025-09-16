@@ -61,11 +61,12 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 12px 8px;
+  padding: 20px 8px 16px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  safe-area-inset-top: env(safe-area-inset-top);
 }
 
 .bottom-bar {
@@ -74,11 +75,12 @@ html, body {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 8px;
+  padding: 20px 8px 30px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: calc(30px + env(safe-area-inset-bottom));
 }
 
 .category-selector {
@@ -161,10 +163,14 @@ html, body {
 
 .main-content {
   flex: 1;
-  padding: 80px 8px 80px;
+  padding: 100px 16px 100px;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 200px);
 }
 
 .app-footer {
@@ -205,6 +211,27 @@ html, body {
   }
 }
 
+/* iPhone 15 Pro specific optimizations */
+@media (max-width: 430px) and (max-height: 932px) {
+  .top-bar {
+    padding: 24px 8px 16px;
+  }
+
+  .bottom-bar {
+    padding: 20px 8px 40px;
+  }
+
+  .main-content {
+    padding: 120px 16px 120px;
+    min-height: calc(100vh - 240px);
+  }
+
+  .algorithm-card {
+    max-width: 390px;
+    padding: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .category-selector {
     gap: 6px;
@@ -236,13 +263,7 @@ html, body {
     white-space: nowrap;
   }
 
-  .random-btn {
-    width: 100%;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
   .main-content {
-    padding: 4px;
+    padding: 110px 16px 110px;
   }
 }
