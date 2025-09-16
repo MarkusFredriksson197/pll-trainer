@@ -69,10 +69,6 @@ function App() {
       <main className="main-content">
         <AlgorithmCard algorithm={currentAlgorithm} />
       </main>
-
-      <footer className="app-footer">
-        <p>Based on CubeHead's PLL Algorithm Sheet</p>
-      </footer>
     </div>
   );
 }
