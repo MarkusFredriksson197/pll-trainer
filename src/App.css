@@ -174,7 +174,7 @@ html, body {
   display: flex;
   justify-content: center;
   padding-top: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 1000px;
 }
 
 .app-footer {
