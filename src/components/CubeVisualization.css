@@ -1,0 +1,62 @@
+.cube-visualization {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cube-face {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cube-sticker {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid #222;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.cube-sticker.red {
+  background-color: #dc3545;
+}
+
+.cube-sticker.green {
+  background-color: #28a745;
+}
+
+.cube-sticker.blue {
+  background-color: #007bff;
+}
+
+.cube-sticker.orange {
+  background-color: #fd7e14;
+}
+
+.cube-sticker.yellow {
+  background-color: #ffc107;
+}
+
+.cube-sticker.white {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .cube-sticker {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cube-sticker {
+    width: 30px;
+    height: 30px;
+  }
+}
