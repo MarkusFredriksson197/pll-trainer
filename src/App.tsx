@@ -28,10 +28,6 @@ function App() {
     setCurrentIndex(0);
   };
 
-  const handleRandom = () => {
-    const randomIndex = Math.floor(Math.random() * filteredAlgorithms.length);
-    setCurrentIndex(randomIndex);
-  };
 
   return (
     <div className="App">
@@ -65,9 +61,6 @@ function App() {
             Next →
           </button>
         </div>
-        <button className="random-btn" onClick={handleRandom}>
-          🎲 Random
-        </button>
       </div>
     </div>
   );

@@ -136,46 +136,12 @@
   font-size: 1rem;
 }
 
-.tips-toggle-section {
-  margin: 16px 0;
-}
-
-.tips-toggle-btn {
-  width: 100%;
-  padding: 10px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.tips-toggle-btn:hover {
-  background: #2980b9;
-  transform: translateY(-1px);
-}
-
 .notes-section {
   background: #fff9e6;
   padding: 16px;
   border-radius: 8px;
   border-left: 4px solid #f39c12;
-  margin-top: 12px;
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin: 16px 0;
 }
 
 @media (max-width: 768px) {
