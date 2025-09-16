@@ -170,6 +170,9 @@ html, body {
   background: white;
   margin-top: 80px;
   margin-bottom: 100px;
+  height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
 }
 
 .app-footer {
