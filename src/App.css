@@ -222,12 +222,12 @@ html, body {
   }
 
   .main-content {
-    padding: 120px 16px 120px;
+    padding: 120px 8px 120px;
     min-height: calc(100vh - 240px);
   }
 
   .algorithm-card {
-    max-width: 390px;
+    max-width: 98%;
     padding: 16px;
   }
 }
