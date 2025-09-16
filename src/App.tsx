@@ -35,10 +35,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
-        <h1>PLL Trainer</h1>
-      </header>
-
       <div className="controls">
         <div className="category-selector">
           {categories.map(category => (

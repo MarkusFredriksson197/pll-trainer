@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PLLAlgorithm } from '../data/pllAlgorithms';
 import './AlgorithmCard.css';
 
@@ -7,6 +7,8 @@ interface AlgorithmCardProps {
 }
 
 const AlgorithmCard: React.FC<AlgorithmCardProps> = ({ algorithm }) => {
+  const [showTips, setShowTips] = useState(false);
+
   const renderDifficultyDots = (difficulty: number) => {
     return Array.from({ length: 4 }, (_, index) => (
       <span
@@ -62,9 +64,18 @@ const AlgorithmCard: React.FC<AlgorithmCardProps> = ({ algorithm }) => {
         <p>{algorithm.recognition}</p>
       </div>
 
-      <div className="notes-section">
-        <h3>Tips & Notes</h3>
-        <p>{algorithm.notes}</p>
+      <div className="tips-toggle-section">
+        <button
+          className="tips-toggle-btn"
+          onClick={() => setShowTips(!showTips)}
+        >
+          {showTips ? '▼ Hide Tips & Notes' : '▶ Show Tips & Notes'}
+        </button>
+        {showTips && (
+          <div className="notes-section">
+            <p>{algorithm.notes}</p>
+          </div>
+        )}
       </div>
     </div>
   );
